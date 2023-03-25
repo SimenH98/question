@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="tellSofia.css">   
+    <title>Simen's question to Sofia</title>
+</head>
+
+<body>
+    <div class="content">
+        <br/>
+        <h1>
+            Du Sofia? 
+        </h1>  
+    <br/>
+        <p id="demo"></p>
+    </div>
+    
+    <div class="container">
+          
+        <button type="submit" class="btn" onclick="openPopup()">Ja Simen?</button>
+        <div class="popup" id="popup">
+            <img src="pic1.jpg">
+            <h2>Jeg elsker deg Sofia!</h2>
+            <p>v&auml;lja ett alternativ:</p>
+            <button type="button" class ="jag elskar dig1" onclick="closePopup1()">Jag &auml;lskar dig</button>
+            <button type="button" class ="jag elskar dig2" onclick="closePopup2()">Jag &auml;lskar dig och vill bara vara med dig</button>
+        </div>
+        
+    </div>
+
+    
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+
+        function closePopup1(){
+            popup.classList.remove("open-popup")
+            var txt;
+            if(button = 'jag elskar dig1'){
+                txt = "If you are a bird, I am a bird <3";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function closePopup2(){
+            popup.classList.remove("open-popup")
+            var txt;
+            if(button = 'jag elskar dig2'){
+                txt = "Du og jeg skal v&aelig;re sammen for alltid <3";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
